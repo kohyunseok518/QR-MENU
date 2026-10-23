@@ -65,7 +65,6 @@ export default function App() {
           </span>
           <span className="brand-wordmark">
             <strong>{t.restaurant}</strong>
-            <span>KOREAN KITCHEN</span>
           </span>
         </a>
         <LanguageSelect locale={locale} onChange={setLocale} />
@@ -73,24 +72,15 @@ export default function App() {
       <main>
         <section className="hero container" aria-labelledby="welcome-title">
           <div className="hero-copy">
-            <p className="eyebrow">
-              <span />
-              {t.heroEyebrow}
-            </p>
             <h1 id="welcome-title">{t.heroTitle}</h1>
             <p className="hero-description">{t.heroDescription}</p>
           </div>
           <div className="hero-stamp" aria-hidden="true">
-            <span className="stamp-top">SODAM KITCHEN</span>
+            <span className="stamp-top">{t.restaurant}</span>
             <BrandMark />
             <span className="stamp-bottom">{t.stamp}</span>
             <span className="stamp-star left">✳</span>
             <span className="stamp-star right">✳</span>
-          </div>
-          <div className="order-note">
-            <span className="order-note-dot" />
-            <span>{t.orderNote}</span>
-            <ArrowRight size={14} aria-hidden="true" />
           </div>
         </section>
         <nav className="category-nav" aria-label={t.category}>

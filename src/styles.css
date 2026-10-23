@@ -79,18 +79,13 @@ select {
 }
 .brand-wordmark {
   display: grid;
-  gap: 4px;
 }
 .brand-wordmark strong {
   font-family: var(--serif);
   font-size: 22px;
   letter-spacing: -0.07em;
   font-weight: 600;
-}
-.brand-wordmark > span {
-  font-size: 8px;
-  letter-spacing: 0.23em;
-  color: #8b7764;
+  white-space: nowrap;
 }
 .language-select {
   position: relative;
@@ -133,21 +128,6 @@ select {
 .hero-copy {
   max-width: 850px;
 }
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  color: var(--accent);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.11em;
-  margin: 0 0 15px;
-}
-.eyebrow > span {
-  width: 17px;
-  height: 1px;
-  background: currentColor;
-}
 .hero h1 {
   font-family: var(--serif);
   font-size: clamp(31px, 4.4vw, 53px);
@@ -162,7 +142,7 @@ select {
   font-size: 13px;
   line-height: 1.9;
   white-space: pre-line;
-  margin: 18px 0 31px;
+  margin: 18px 0 0;
   letter-spacing: -0.02em;
 }
 .hero-stamp {
@@ -207,26 +187,6 @@ select {
 }
 .stamp-star.right {
   right: 13px;
-}
-.order-note {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  color: #81786b;
-  font-size: 11px;
-  line-height: 1.6;
-  width: fit-content;
-}
-.order-note > svg {
-  margin-left: 5px;
-  color: #a19787;
-}
-.order-note-dot {
-  width: 5px;
-  height: 5px;
-  background: #9b9c82;
-  border-radius: 50%;
-  flex: none;
 }
 .category-nav {
   position: sticky;
@@ -799,9 +759,6 @@ select {
   .brand-wordmark strong {
     font-size: 19px;
   }
-  .brand-wordmark > span {
-    font-size: 7px;
-  }
   .brand {
     gap: 9px;
   }
@@ -823,21 +780,13 @@ select {
     line-height: 1.55;
     letter-spacing: -0.07em;
   }
-  .eyebrow {
-    font-size: 9px;
-    margin-bottom: 10px;
-    letter-spacing: 0.09em;
-  }
   .hero-description {
     font-size: 12px;
     line-height: 1.85;
-    margin: 13px 0 20px;
+    margin: 13px 0 0;
   }
   .hero-stamp {
     display: none;
-  }
-  .order-note {
-    font-size: 10px;
   }
   .category-scroll {
     gap: 7px;
@@ -983,9 +932,6 @@ select {
   }
   .card-body {
     padding: 15px;
-  }
-  .brand-wordmark > span {
-    display: none;
   }
   .brand-wordmark strong {
     font-size: 17px;

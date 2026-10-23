@@ -107,8 +107,8 @@ export const menuRows: MenuItemRow[] = [
     "bulgogi",
     16000,
     {
-      ko: "소담 소불고기",
-      en: "Sodam Beef Bulgogi",
+      ko: "소불고기",
+      en: "Beef Bulgogi",
       "zh-Hans": "招牌烤牛肉",
       "zh-Hant": "招牌烤牛肉",
     },

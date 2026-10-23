@@ -67,7 +67,6 @@ export function MenuDetail({
               </div>
               <p className="detail-price">{formatPrice(item.price, locale)}</p>
               <section className="detail-description">
-                <h3>{t.description}</h3>
                 <Dialog.Description>
                   {item.description[locale]}
                 </Dialog.Description>

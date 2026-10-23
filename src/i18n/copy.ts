@@ -3,10 +3,8 @@ import type { Locale, LocalizedText } from "../domain/menu";
 interface Copy {
   restaurant: string;
   tagline: string;
-  heroEyebrow: string;
   heroTitle: string;
   heroDescription: string;
-  orderNote: string;
   all: string;
   menu: string;
   menuCount: (count: number) => string;
@@ -14,7 +12,6 @@ interface Copy {
   soldOut: string;
   language: string;
   close: string;
-  description: string;
   origins: string;
   allergens: string;
   originUnknown: string;
@@ -40,21 +37,18 @@ interface Copy {
 
 export const copy: Record<Locale, Copy> = {
   ko: {
-    restaurant: "소담식당",
+    restaurant: "하귀바글바글가든",
     tagline: "정성을 담은 한 끼",
-    heroEyebrow: "좋은 재료, 소박한 정성",
     heroTitle: "오늘도, 따뜻한 한 끼.",
     heroDescription:
       "익숙한 맛에 정성을 더했습니다.\n소담하게 차린 우리 식탁에 오신 걸 환영해요.",
-    orderNote: "주문은 직원에게 말씀해 주세요.",
     all: "전체",
     menu: "메뉴",
-    menuCount: (n) => `${n}가지의 정성`,
+    menuCount: (n) => `${n}개`,
     details: "자세히 보기",
     soldOut: "오늘은 품절",
     language: "언어 선택",
     close: "닫기",
-    description: "이런 메뉴예요",
     origins: "재료 원산지",
     allergens: "알레르기 정보",
     originUnknown: "원산지 정보를 확인하고 있어요.",
@@ -78,21 +72,18 @@ export const copy: Record<Locale, Copy> = {
     originalName: "한국어 메뉴명",
   },
   en: {
-    restaurant: "Sodam",
+    restaurant: "하귀바글바글가든",
     tagline: "A meal made with care",
-    heroEyebrow: "HONEST INGREDIENTS. WARM HEARTS.",
     heroTitle: "A little comfort, served warm.",
     heroDescription:
       "Familiar Korean flavors, thoughtfully prepared.\nThere’s always a place for you at our table.",
-    orderNote: "Please order with a member of our team.",
     all: "All",
     menu: "Our menu",
-    menuCount: (n) => `${n} dishes, made with care`,
+    menuCount: (n) => `${n} dishes`,
     details: "View details",
     soldOut: "Sold out today",
     language: "Choose language",
     close: "Close",
-    description: "About this dish",
     origins: "Ingredient origins",
     allergens: "Allergen information",
     originUnknown: "Origin information is being checked.",
@@ -117,20 +108,17 @@ export const copy: Record<Locale, Copy> = {
     originalName: "Korean menu name",
   },
   "zh-Hans": {
-    restaurant: "Sodam 食堂",
+    restaurant: "하귀바글바글가든",
     tagline: "用心做的一餐",
-    heroEyebrow: "好食材，暖心意",
     heroTitle: "今天，也要好好吃饭。",
     heroDescription: "用心烹调熟悉的韩式滋味。\n欢迎来到我们温暖的餐桌。",
-    orderNote: "点餐请告知店员。",
     all: "全部",
     menu: "菜单",
-    menuCount: (n) => `${n} 道用心之作`,
+    menuCount: (n) => `${n} 道`,
     details: "查看详情",
     soldOut: "今日售罄",
     language: "选择语言",
     close: "关闭",
-    description: "菜品介绍",
     origins: "食材产地",
     allergens: "过敏原信息",
     originUnknown: "正在确认食材产地。",
@@ -154,20 +142,17 @@ export const copy: Record<Locale, Copy> = {
     originalName: "韩语菜名",
   },
   "zh-Hant": {
-    restaurant: "Sodam 食堂",
+    restaurant: "하귀바글바글가든",
     tagline: "用心做的一餐",
-    heroEyebrow: "好食材，暖心意",
     heroTitle: "今天，也要好好吃飯。",
     heroDescription: "用心烹調熟悉的韓式滋味。\n歡迎來到我們溫暖的餐桌。",
-    orderNote: "點餐請告知店員。",
     all: "全部",
     menu: "菜單",
-    menuCount: (n) => `${n} 道用心之作`,
+    menuCount: (n) => `${n} 道`,
     details: "查看詳情",
     soldOut: "今日售罄",
     language: "選擇語言",
     close: "關閉",
-    description: "餐點介紹",
     origins: "食材產地",
     allergens: "過敏原資訊",
     originUnknown: "正在確認食材產地。",
