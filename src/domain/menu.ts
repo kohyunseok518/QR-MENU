@@ -1,8 +1,8 @@
-export const locales = ['ko', 'en', 'zh-Hans', 'zh-Hant'] as const;
+export const locales = ["ko", "en", "zh-Hans", "zh-Hant"] as const;
 export type Locale = (typeof locales)[number];
 export type LocalizedText = Record<Locale, string>;
-export type MenuStatus = 'available' | 'sold_out' | 'hidden';
-export type AllergenReviewStatus = 'unreviewed' | 'reviewed';
+export type MenuStatus = "available" | "sold_out" | "hidden";
+export type AllergenReviewStatus = "unreviewed" | "reviewed";
 
 export interface Category {
   id: string;
@@ -22,7 +22,7 @@ export interface MenuItem {
   description: LocalizedText;
   price: number;
   imageUrl: string | null;
-  status: Exclude<MenuStatus, 'hidden'>;
+  status: Exclude<MenuStatus, "hidden">;
   origins: OriginInfo[];
   allergens: string[];
   allergenReviewStatus: AllergenReviewStatus;
