@@ -64,28 +64,10 @@ select {
   align-items: center;
   gap: 11px;
 }
-.brand-symbol {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  color: #fff7eb;
-  background: var(--accent);
-}
-.brand-symbol svg {
-  width: 32px;
-  height: 32px;
-}
 .brand-wordmark {
-  display: grid;
-}
-.brand-wordmark strong {
-  font-family: var(--serif);
-  font-size: 22px;
-  letter-spacing: -0.07em;
-  font-weight: 600;
-  white-space: nowrap;
+  display: block;
+  width: 220px;
+  height: 80px;
 }
 .language-select {
   position: relative;
@@ -748,16 +730,9 @@ select {
   .site-header {
     padding-block: 20px;
   }
-  .brand-symbol {
-    width: 39px;
-    height: 39px;
-  }
-  .brand-symbol svg {
-    width: 28px;
-    height: 28px;
-  }
-  .brand-wordmark strong {
-    font-size: 19px;
+  .brand-wordmark {
+    width: 180px;
+    height: 66px;
   }
   .brand {
     gap: 9px;
@@ -933,8 +908,9 @@ select {
   .card-body {
     padding: 15px;
   }
-  .brand-wordmark strong {
-    font-size: 17px;
+  .brand-wordmark {
+    width: 154px;
+    height: 56px;
   }
   .hero h1 {
     font-size: 27px;

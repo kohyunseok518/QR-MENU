@@ -37,7 +37,7 @@ interface Copy {
 
 export const copy: Record<Locale, Copy> = {
   ko: {
-    restaurant: "하귀바글바글가든",
+    restaurant: "바글바글",
     tagline: "정성을 담은 한 끼",
     heroTitle: "오늘도, 따뜻한 한 끼.",
     heroDescription:
@@ -72,7 +72,7 @@ export const copy: Record<Locale, Copy> = {
     originalName: "한국어 메뉴명",
   },
   en: {
-    restaurant: "하귀바글바글가든",
+    restaurant: "바글바글",
     tagline: "A meal made with care",
     heroTitle: "A little comfort, served warm.",
     heroDescription:
@@ -108,7 +108,7 @@ export const copy: Record<Locale, Copy> = {
     originalName: "Korean menu name",
   },
   "zh-Hans": {
-    restaurant: "하귀바글바글가든",
+    restaurant: "바글바글",
     tagline: "用心做的一餐",
     heroTitle: "今天，也要好好吃饭。",
     heroDescription: "用心烹调熟悉的韩式滋味。\n欢迎来到我们温暖的餐桌。",
@@ -142,7 +142,7 @@ export const copy: Record<Locale, Copy> = {
     originalName: "韩语菜名",
   },
   "zh-Hant": {
-    restaurant: "하귀바글바글가든",
+    restaurant: "바글바글",
     tagline: "用心做的一餐",
     heroTitle: "今天，也要好好吃飯。",
     heroDescription: "用心烹調熟悉的韓式滋味。\n歡迎來到我們溫暖的餐桌。",

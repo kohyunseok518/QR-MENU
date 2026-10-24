@@ -10,6 +10,7 @@ import {
   CircleAlert,
 } from "lucide-react";
 import { BrandMark } from "./components/BrandMark";
+import { BrandWordmark } from "./components/BrandWordmark";
 import { LanguageSelect } from "./components/LanguageSelect";
 import { MenuCard } from "./components/MenuCard";
 import { MenuDetail } from "./components/MenuDetail";
@@ -60,12 +61,7 @@ export default function App() {
           href={`/menu?lang=${locale}`}
           aria-label={t.restaurant}
         >
-          <span className="brand-symbol">
-            <BrandMark />
-          </span>
-          <span className="brand-wordmark">
-            <strong>{t.restaurant}</strong>
-          </span>
+          <BrandWordmark />
         </a>
         <LanguageSelect locale={locale} onChange={setLocale} />
       </header>
