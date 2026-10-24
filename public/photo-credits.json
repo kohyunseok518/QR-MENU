@@ -1,74 +1,82 @@
 [
   {
-    "file": "/images/bibimbap.jpg",
-    "title": "Hot stone pot bibimbap with beef (Bulgogi dolsot bibimbap) - Kogi 2023-10-16.jpg",
-    "author": "Andy Li",
-    "source": "https://commons.wikimedia.org/wiki/File:Hot_stone_pot_bibimbap_with_beef_(Bulgogi_dolsot_bibimbap)_-_Kogi_2023-10-16.jpg",
-    "license": "CC0",
-    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "modification": "Resized and recompressed as JPEG; displayed with responsive cropping."
+    "name": "해장국",
+    "file": "/images/restaurant/haejangguk.jpg",
+    "source": "https://naverbooking-phinf.pstatic.net/20240621_291/1718946680624n9Bzz_JPEG/1718945838381.jpg",
+    "sourcePage": "https://m.booking.naver.com/order/bizes/460848/items/3735484",
+    "channel": "네이버 주문 매장 메뉴",
+    "checkedAt": "2026-10-24",
+    "downloadUrl": "https://naverbooking-phinf.pstatic.net/20240621_291/1718946680624n9Bzz_JPEG/1718945838381.jpg?type=f459_345_60_sharpen",
+    "modification": "배포 서버의 상세 메뉴용 이미지; 화면에서 비율에 맞춰 자름."
   },
   {
-    "file": "/images/bulgogi.jpg",
-    "title": "Beef bulgogi - Cambridge, MA.jpg",
-    "author": "Daderot",
-    "source": "https://commons.wikimedia.org/wiki/File:Beef_bulgogi_-_Cambridge,_MA.jpg",
-    "license": "CC0",
-    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "modification": "Resized and recompressed as JPEG; displayed with responsive cropping."
+    "name": "매운갈비찜",
+    "file": "/images/restaurant/spicy-ribs.jpg",
+    "source": "https://naverbooking-phinf.pstatic.net/20240604_171/17174904765480SpsG_JPEG/1717489842891.jpg",
+    "sourcePage": "https://m.booking.naver.com/order/bizes/460848/items/3735484",
+    "channel": "네이버 주문 매장 메뉴",
+    "checkedAt": "2026-10-24",
+    "downloadUrl": "https://naverbooking-phinf.pstatic.net/20240604_171/17174904765480SpsG_JPEG/1717489842891.jpg?type=f459_345_60_sharpen",
+    "modification": "배포 서버의 상세 메뉴용 이미지; 화면에서 비율에 맞춰 자름."
   },
   {
-    "file": "/images/kimchi.jpg",
-    "title": "Kimchi jjigae - San Francisco, CA.jpg",
-    "author": "Daderot",
-    "source": "https://commons.wikimedia.org/wiki/File:Kimchi_jjigae_-_San_Francisco,_CA.jpg",
-    "license": "CC0",
-    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "modification": "Resized and recompressed as JPEG; displayed with responsive cropping."
+    "name": "흑돼지김치찌개",
+    "file": "/images/restaurant/black-pork-kimchi.jpg",
+    "source": "https://naverbooking-phinf.pstatic.net/20240604_50/1717490992648qCnXT_JPEG/1717489821875.jpg",
+    "sourcePage": "https://m.booking.naver.com/order/bizes/460848/items/3735484",
+    "channel": "네이버 주문 매장 메뉴",
+    "checkedAt": "2026-10-24",
+    "downloadUrl": "https://naverbooking-phinf.pstatic.net/20240604_50/1717490992648qCnXT_JPEG/1717489821875.jpg?type=f459_345_60_sharpen",
+    "modification": "배포 서버의 상세 메뉴용 이미지; 화면에서 비율에 맞춰 자름."
   },
   {
-    "file": "/images/tofu.jpg",
-    "title": "Sundubu-jjigae - San Francisco, CA.jpg",
-    "author": "Daderot",
-    "source": "https://commons.wikimedia.org/wiki/File:Sundubu-jjigae_-_San_Francisco,_CA.jpg",
-    "license": "CC0",
-    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "modification": "Resized and recompressed as JPEG; displayed with responsive cropping."
+    "name": "양념갈비",
+    "file": "/images/restaurant/marinated-ribs.jpg",
+    "source": "https://naverbooking-phinf.pstatic.net/20250428_36/1745815314250bQNhc_JPEG/image.jpg",
+    "sourcePage": "https://m.booking.naver.com/order/bizes/460848/items/3735484",
+    "channel": "네이버 주문 매장 메뉴",
+    "checkedAt": "2026-10-24",
+    "downloadUrl": "https://naverbooking-phinf.pstatic.net/20250428_36/1745815314250bQNhc_JPEG/image.jpg?type=f459_345_60_sharpen",
+    "modification": "배포 서버의 상세 메뉴용 이미지; 화면에서 비율에 맞춰 자름."
   },
   {
-    "file": "/images/japchae.jpg",
-    "title": "Japchae 잡채G.jpg",
-    "author": "Wikimedia Commons contributor",
-    "source": "https://commons.wikimedia.org/wiki/File:Japchae_%EC%9E%A1%EC%B1%84G.jpg",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "modification": "Resized and recompressed as JPEG; displayed with responsive cropping."
+    "name": "내장탕",
+    "file": "/images/restaurant/naejangtang.jpg",
+    "source": "https://naverbooking-phinf.pstatic.net/20240604_252/1717490434728SIdRb_JPEG/1717489829972.jpg",
+    "sourcePage": "https://m.booking.naver.com/order/bizes/460848/items/3735484",
+    "channel": "네이버 주문 매장 메뉴",
+    "checkedAt": "2026-10-24",
+    "downloadUrl": "https://naverbooking-phinf.pstatic.net/20240604_252/1717490434728SIdRb_JPEG/1717489829972.jpg?type=f459_345_60_sharpen",
+    "modification": "배포 서버의 상세 메뉴용 이미지; 화면에서 비율에 맞춰 자름."
   },
   {
-    "file": "/images/pajeon.jpg",
-    "title": "Haemul-pajeon 1.jpg",
-    "author": "Jirka Matousek",
-    "source": "https://commons.wikimedia.org/wiki/File:Haemul-pajeon_1.jpg",
-    "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-    "modification": "Resized and recompressed as JPEG; displayed with responsive cropping."
+    "name": "황태해장국",
+    "file": "/images/restaurant/hwangtae.jpg",
+    "source": "https://naverbooking-phinf.pstatic.net/20240604_63/1717490456910u6OFe_JPEG/1717489833267.jpg",
+    "sourcePage": "https://m.booking.naver.com/order/bizes/460848/items/3735484",
+    "channel": "네이버 주문 매장 메뉴",
+    "checkedAt": "2026-10-24",
+    "downloadUrl": "https://naverbooking-phinf.pstatic.net/20240604_63/1717490456910u6OFe_JPEG/1717489833267.jpg?type=f459_345_60_sharpen",
+    "modification": "배포 서버의 상세 메뉴용 이미지; 화면에서 비율에 맞춰 자름."
   },
   {
-    "file": "/images/mandu.jpg",
-    "title": "Gunmandu - San Francisco, CA.jpg",
-    "author": "Daderot",
-    "source": "https://commons.wikimedia.org/wiki/File:Gunmandu_-_San_Francisco,_CA.jpg",
-    "license": "CC0",
-    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "modification": "Resized and recompressed as JPEG; displayed with responsive cropping."
+    "name": "양념갈비(비조리)",
+    "file": "/images/restaurant/uncooked-ribs.jpg",
+    "source": "https://naverbooking-phinf.pstatic.net/20250428_261/1745815752230swu6k_JPEG/image.jpg",
+    "sourcePage": "https://m.booking.naver.com/order/bizes/460848/items/3735484",
+    "channel": "네이버 주문 매장 메뉴",
+    "checkedAt": "2026-10-24",
+    "downloadUrl": "https://naverbooking-phinf.pstatic.net/20250428_261/1745815752230swu6k_JPEG/image.jpg?type=f459_345_60_sharpen",
+    "modification": "배포 서버의 상세 메뉴용 이미지; 화면에서 비율에 맞춰 자름."
   },
   {
-    "file": "/images/sikhye.jpg",
-    "title": "Sikhye.jpg",
-    "author": "뚱표아빠의 세상사는 이야기",
-    "source": "https://commons.wikimedia.org/wiki/File:Sikhye.jpg",
-    "license": "CC BY 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-    "modification": "Resized and recompressed as JPEG; displayed with responsive cropping."
+    "name": "몸국",
+    "file": "/images/restaurant/momguk.jpg",
+    "source": "https://imagefarm.baemin.com/smartmenuimage/upload/image/2025/7/17/wwX8Oh3Cz08ynT2bH8QYp42iChlUcBmsKMFGxpLw2fX72puqSJCZCJ92zM1E_OCv0qkhgz5x9bluaGj1Q-PnoQ==.jpg",
+    "sourcePage": "https://pcmap.place.naver.com/restaurant/1742606757/menu/1041592502",
+    "channel": "네이버 플레이스 배민 연동 메뉴",
+    "checkedAt": "2026-10-24",
+    "downloadUrl": "https://imagefarm.baemin.com/smartmenuimage/upload/image/2025/7/17/wwX8Oh3Cz08ynT2bH8QYp42iChlUcBmsKMFGxpLw2fX72puqSJCZCJ92zM1E_OCv0qkhgz5x9bluaGj1Q-PnoQ==.jpg",
+    "modification": "원본 JPEG; 화면에서 비율에 맞춰 자름."
   }
 ]

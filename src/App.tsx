@@ -1,8 +1,8 @@
 import { useRef, useState } from "react";
 import {
-  Coffee,
+  Wine,
   LayoutGrid,
-  Leaf,
+  Flame,
   RefreshCw,
   Soup,
   Utensils,
@@ -18,7 +18,7 @@ import { useMenuCatalog } from "./hooks/useMenuCatalog";
 import { useMenuDialog } from "./hooks/useMenuDialog";
 import "./styles.css";
 
-const categoryIcons = [Utensils, Soup, Leaf, Coffee];
+const categoryIcons = [Soup, Flame, Utensils, Wine];
 
 export default function App() {
   const { locale, setLocale, t } = useLocale();

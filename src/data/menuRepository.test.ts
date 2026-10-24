@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { categoryRows, menuRows } from "./fixtures";
+import { categoryRows, menuRows } from "./restaurantMenu";
 import { mapCatalog } from "./mapper";
-import { mockMenuRepository } from "./menuRepository";
+import { staticMenuRepository } from "./menuRepository";
 
 describe("menu data boundary", () => {
   it("omits hidden menus and now-empty categories, but retains sold-out menus", () => {
@@ -10,7 +10,12 @@ describe("menu data boundary", () => {
       category_id: categoryRows[3]!.id,
       status: "hidden" as const,
     };
-    const result = mapCatalog(categoryRows, [hidden, menuRows[5]!]);
+    const soldOut = {
+      ...menuRows[0]!,
+      category_id: categoryRows[2]!.id,
+      status: "sold_out" as const,
+    };
+    const result = mapCatalog(categoryRows, [hidden, soldOut]);
     expect(result.items).toHaveLength(1);
     expect(result.items[0]!.status).toBe("sold_out");
     expect(result.categories.map((x) => x.id)).toEqual([categoryRows[2]!.id]);
@@ -39,13 +44,13 @@ describe("menu data boundary", () => {
   });
   it("supports cancelled requests", async () => {
     const controller = new AbortController();
-    const request = mockMenuRepository.getCatalog(controller.signal);
+    const request = staticMenuRepository.getCatalog(controller.signal);
     controller.abort();
     await expect(request).rejects.toMatchObject({ name: "AbortError" });
   });
-  it("returns independent snapshots and four translations for every sample item", async () => {
-    const first = await mockMenuRepository.getCatalog();
-    const second = await mockMenuRepository.getCatalog();
+  it("returns independent snapshots and four translations for every menu item", async () => {
+    const first = await staticMenuRepository.getCatalog();
+    const second = await staticMenuRepository.getCatalog();
     first.items[0]!.allergens.push("test");
     expect(second.items[0]!.allergens).not.toContain("test");
     for (const item of second.items) {

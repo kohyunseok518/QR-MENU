@@ -1,8 +1,8 @@
 import type { MenuRepository } from "../domain/menu";
-import { categoryRows, menuRows } from "./fixtures";
+import { categoryRows, menuRows } from "./restaurantMenu";
 import { mapCatalog } from "./mapper";
 
-export const mockMenuRepository: MenuRepository = {
+export const staticMenuRepository: MenuRepository = {
   async getCatalog(signal) {
     signal?.throwIfAborted();
     await new Promise<void>((resolve, reject) => {
@@ -23,4 +23,4 @@ export const mockMenuRepository: MenuRepository = {
 };
 
 // Composition root: replace this implementation to connect Supabase without changing UI components.
-export const menuRepository: MenuRepository = mockMenuRepository;
+export const menuRepository: MenuRepository = staticMenuRepository;
