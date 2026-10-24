@@ -66,8 +66,9 @@ select {
 }
 .brand-wordmark {
   display: block;
-  width: 220px;
-  height: 80px;
+  width: 168px;
+  height: auto;
+  color: #302c25;
 }
 .language-select {
   position: relative;
@@ -731,8 +732,7 @@ select {
     padding-block: 20px;
   }
   .brand-wordmark {
-    width: 180px;
-    height: 66px;
+    width: 144px;
   }
   .brand {
     gap: 9px;
@@ -909,8 +909,7 @@ select {
     padding: 15px;
   }
   .brand-wordmark {
-    width: 154px;
-    height: 56px;
+    width: 132px;
   }
   .hero h1 {
     font-size: 27px;
