@@ -3,11 +3,8 @@ import type { Locale, LocalizedText } from "../domain/menu";
 interface Copy {
   restaurant: string;
   tagline: string;
-  heroTitle: string;
-  heroDescription: string;
   all: string;
   menu: string;
-  menuCount: (count: number) => string;
   details: string;
   soldOut: string;
   language: string;
@@ -26,12 +23,8 @@ interface Copy {
   emptyTitle: string;
   emptyDescription: string;
   photoMissing: string;
-  sample: string;
-  credits: string;
   skip: string;
   category: string;
-  footerLine: string;
-  stamp: string;
   originalName: string;
 }
 
@@ -39,12 +32,8 @@ export const copy: Record<Locale, Copy> = {
   ko: {
     restaurant: "바글바글",
     tagline: "정성을 담은 한 끼",
-    heroTitle: "오늘도, 따뜻한 한 끼.",
-    heroDescription:
-      "익숙한 맛에 정성을 더했습니다.\n소담하게 차린 우리 식탁에 오신 걸 환영해요.",
     all: "전체",
     menu: "메뉴",
-    menuCount: (n) => `${n}개`,
     details: "자세히 보기",
     soldOut: "오늘은 품절",
     language: "언어 선택",
@@ -63,23 +52,15 @@ export const copy: Record<Locale, Copy> = {
     emptyTitle: "메뉴를 준비하고 있어요",
     emptyDescription: "잠시 후 다시 찾아주세요.",
     photoMissing: "사진 준비 중",
-    sample: "디자인 확인용 샘플 메뉴판입니다.",
-    credits: "사진 출처",
     skip: "메뉴로 바로가기",
     category: "메뉴 종류",
-    footerLine: "좋은 한 끼가, 좋은 하루로.",
-    stamp: "소담한 한 상",
     originalName: "한국어 메뉴명",
   },
   en: {
     restaurant: "바글바글",
     tagline: "A meal made with care",
-    heroTitle: "A little comfort, served warm.",
-    heroDescription:
-      "Familiar Korean flavors, thoughtfully prepared.\nThere’s always a place for you at our table.",
     all: "All",
     menu: "Our menu",
-    menuCount: (n) => `${n} dishes`,
     details: "View details",
     soldOut: "Sold out today",
     language: "Choose language",
@@ -99,22 +80,15 @@ export const copy: Record<Locale, Copy> = {
     emptyTitle: "Our menu is being prepared",
     emptyDescription: "Please check back shortly.",
     photoMissing: "Photo coming soon",
-    sample: "A sample menu for design preview.",
-    credits: "Photo credits",
     skip: "Skip to menu",
     category: "Menu categories",
-    footerLine: "A good meal. A better day.",
-    stamp: "Made with care",
     originalName: "Korean menu name",
   },
   "zh-Hans": {
     restaurant: "바글바글",
     tagline: "用心做的一餐",
-    heroTitle: "今天，也要好好吃饭。",
-    heroDescription: "用心烹调熟悉的韩式滋味。\n欢迎来到我们温暖的餐桌。",
     all: "全部",
     menu: "菜单",
-    menuCount: (n) => `${n} 道`,
     details: "查看详情",
     soldOut: "今日售罄",
     language: "选择语言",
@@ -133,22 +107,15 @@ export const copy: Record<Locale, Copy> = {
     emptyTitle: "菜单正在准备中",
     emptyDescription: "请稍后再来看看。",
     photoMissing: "图片准备中",
-    sample: "本菜单为设计预览示例。",
-    credits: "图片来源",
     skip: "跳转到菜单",
     category: "菜品分类",
-    footerLine: "好好吃饭，好好生活。",
-    stamp: "用心的一餐",
     originalName: "韩语菜名",
   },
   "zh-Hant": {
     restaurant: "바글바글",
     tagline: "用心做的一餐",
-    heroTitle: "今天，也要好好吃飯。",
-    heroDescription: "用心烹調熟悉的韓式滋味。\n歡迎來到我們溫暖的餐桌。",
     all: "全部",
     menu: "菜單",
-    menuCount: (n) => `${n} 道`,
     details: "查看詳情",
     soldOut: "今日售罄",
     language: "選擇語言",
@@ -167,12 +134,8 @@ export const copy: Record<Locale, Copy> = {
     emptyTitle: "菜單正在準備中",
     emptyDescription: "請稍後再來看看。",
     photoMissing: "圖片準備中",
-    sample: "本菜單為設計預覽範例。",
-    credits: "圖片來源",
     skip: "跳至菜單",
     category: "餐點分類",
-    footerLine: "好好吃飯，好好生活。",
-    stamp: "用心的一餐",
     originalName: "韓語菜名",
   },
 };

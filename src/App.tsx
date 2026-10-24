@@ -6,7 +6,6 @@ import {
   RefreshCw,
   Soup,
   Utensils,
-  ArrowRight,
   CircleAlert,
 } from "lucide-react";
 import { BrandMark } from "./components/BrandMark";
@@ -26,7 +25,7 @@ export default function App() {
   const { state, reload } = useMenuCatalog();
   const dialog = useMenuDialog();
   const [categoryId, setCategoryId] = useState("all");
-  const menuHeading = useRef<HTMLHeadingElement>(null);
+  const menuStart = useRef<HTMLElement>(null);
   const catalog = state.status === "ready" ? state.catalog : null;
   const selectedCategory = catalog?.categories.find(
     (category) => category.id === categoryId,
@@ -45,10 +44,10 @@ export default function App() {
       behavior: "auto",
     });
     if (
-      menuHeading.current &&
-      menuHeading.current.getBoundingClientRect().top < 70
+      menuStart.current &&
+      menuStart.current.getBoundingClientRect().top < 0
     )
-      menuHeading.current.scrollIntoView({ block: "start", behavior: "auto" });
+      menuStart.current.scrollIntoView({ block: "start", behavior: "auto" });
   }
   return (
     <>
@@ -65,20 +64,10 @@ export default function App() {
         </a>
         <LanguageSelect locale={locale} onChange={setLocale} />
       </header>
-      <main>
-        <section className="hero container" aria-labelledby="welcome-title">
-          <div className="hero-copy">
-            <h1 id="welcome-title">{t.heroTitle}</h1>
-            <p className="hero-description">{t.heroDescription}</p>
-          </div>
-          <div className="hero-stamp" aria-hidden="true">
-            <span className="stamp-top">{t.restaurant}</span>
-            <BrandMark />
-            <span className="stamp-bottom">{t.stamp}</span>
-            <span className="stamp-star left">✳</span>
-            <span className="stamp-star right">✳</span>
-          </div>
-        </section>
+      <main id="menu" ref={menuStart} tabIndex={-1} aria-labelledby="menu-heading">
+        <h1 id="menu-heading" className="sr-only">
+          {t.menu}
+        </h1>
         <nav className="category-nav" aria-label={t.category}>
           <div className="container category-scroll">
             <button
@@ -109,20 +98,9 @@ export default function App() {
         </nav>
         <section
           className="menu-section container"
-          id="menu"
-          aria-labelledby="menu-heading"
+          aria-label={selectedCategory?.name[locale] ?? t.menu}
           aria-busy={state.status === "loading"}
         >
-          <div className="section-heading">
-            <h2 id="menu-heading" ref={menuHeading} tabIndex={-1}>
-              {selectedCategory?.name[locale] ?? t.menu}
-            </h2>
-            {catalog && (
-              <span className="menu-count" aria-live="polite">
-                {t.menuCount(visibleItems.length)}
-              </span>
-            )}
-          </div>
           {state.status === "loading" && (
             <>
               <p className="sr-only" role="status">
@@ -172,21 +150,6 @@ export default function App() {
             ))}
         </section>
       </main>
-      <footer className="site-footer container">
-        <div className="footer-brand">
-          <BrandMark />
-          <span>{t.restaurant}</span>
-          <i />
-          <span>{t.footerLine}</span>
-        </div>
-        <div className="footer-meta">
-          <span>{t.sample}</span>
-          <a href="/photo-credits.html" target="_blank" rel="noreferrer">
-            {t.credits}
-            <ArrowRight size={12} aria-hidden="true" />
-          </a>
-        </div>
-      </footer>
       <MenuDetail
         item={selectedItem}
         locale={locale}
