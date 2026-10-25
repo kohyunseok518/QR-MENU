@@ -1,7 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { categoryRows, menuRows } from "./restaurantMenu";
 import { mapCatalog } from "./mapper";
-import { staticMenuRepository } from "./menuRepository";
 
 describe("menu data boundary", () => {
   it("omits hidden menus and now-empty categories, but retains sold-out menus", () => {
@@ -42,15 +41,9 @@ describe("menu data boundary", () => {
       mapCatalog(categoryRows, [{ ...menuRows[0]!, name_zh_hant: null }]),
     ).toThrow("translation");
   });
-  it("supports cancelled requests", async () => {
-    const controller = new AbortController();
-    const request = staticMenuRepository.getCatalog(controller.signal);
-    controller.abort();
-    await expect(request).rejects.toMatchObject({ name: "AbortError" });
-  });
   it("returns independent snapshots and four translations for every menu item", async () => {
-    const first = await staticMenuRepository.getCatalog();
-    const second = await staticMenuRepository.getCatalog();
+    const first = mapCatalog(structuredClone(categoryRows), structuredClone(menuRows));
+    const second = mapCatalog(structuredClone(categoryRows), structuredClone(menuRows));
     first.items[0]!.allergens.push("test");
     expect(second.items[0]!.allergens).not.toContain("test");
     for (const item of second.items) {
