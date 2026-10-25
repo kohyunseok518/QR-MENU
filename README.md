@@ -4,6 +4,8 @@
 
 현재는 **공개된 실제 매장 메뉴를 정적 데이터로 제공하는 손님용 프론트엔드**입니다. 2026-10-24에 확인한 네이버 주문의 매장 가격을 사용하며, 실시간 가격·품절 연동은 하지 않습니다. 로그인 없이 실행할 수 있고, Supabase 프로젝트나 환경 변수 없이도 동작합니다.
 
+2026-10-25에 Supabase에 카테고리·메뉴 테이블과 RLS를 적용하고, 현재 카테고리 4개·메뉴 19개를 등록했습니다. 프론트엔드는 아직 DB에 연결하지 않았습니다. [DB 구조·권한·SQL 적용 방법](docs/DATABASE.md)을 참고하세요.
+
 ## 구현한 기능
 
 - 상호·언어 선택 → 가로 스크롤 카테고리 → 음식 카드로 이어지는 간결한 화면 (구분선은 카테고리 위에 배치)
@@ -108,12 +110,12 @@ MenuRepository.getCatalog(signal)
 1. `MenuRepository`를 구현하는 Supabase 조회 계층을 만듭니다.
 2. `categories`, `menu_items`를 조회하고 `CategoryRow[]`, `MenuItemRow[]` 형태로 받습니다. 두 쿼리의 오류를 확인하고 전달받은 `AbortSignal`도 연결합니다.
 3. 결과를 `mapCatalog(categoryRows, menuRows, resolveImage)`에 전달합니다.
-4. `resolveImage`에서는 DB의 `image_path`를 Storage 공개 URL로 변환합니다. 사진 경로가 없으면 `null`을 유지합니다.
+4. `resolveImage`에서는 현재 `/images/restaurant/` 정적 경로를 유지합니다. Storage를 사용하는 구현에서는 버킷 경로를 공개 URL로 변환합니다. 사진 경로가 없으면 `null`을 유지합니다.
 5. `menuRepository`에 새 구현을 연결합니다. UI 컴포넌트의 데이터 접근 코드는 변경하지 않습니다.
 
 현재 타입은 DB의 `name_ko`, `name_en`, `name_zh_hans`, `name_zh_hant`, 언어별 설명, 단일 정수 가격, 원산지 코드 목록, 알레르기 코드와 검수 상태를 반영합니다. `src/i18n/copy.ts`에는 초기 DB 마이그레이션의 재료·알레르기 코드 번역이 있습니다. 국가명은 `Intl.DisplayNames`로 표시합니다.
 
-실제 연결에는 브라우저용 publishable key와 공개 조회 RLS를 사용합니다. service role·secret key·DB 비밀번호는 브라우저 코드나 `VITE_` 환경 변수에 넣지 않습니다. 이 저장소는 Supabase 자격 증명을 포함하지 않고 DB를 수정하지 않습니다.
+실제 연결에는 브라우저용 publishable key와 공개 조회 RLS를 사용합니다. service role·secret key·DB 비밀번호는 브라우저 코드나 `VITE_` 환경 변수에 넣지 않습니다. 이 저장소는 Supabase 자격 증명을 포함하지 않습니다. DB 생성 SQL·초기 데이터·권한 검증 SQL은 `supabase/`에 보관하며, 프론트엔드를 실행하거나 빌드하는 것만으로 DB가 바뀌지는 않습니다.
 
 ## 정적 메뉴 수정하기
 
