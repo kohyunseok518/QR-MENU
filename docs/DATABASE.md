@@ -1,6 +1,6 @@
 # 데이터베이스
 
-2026-10-25에 Supabase `QR-MENU` 프로젝트(`pfjcitkxemojspgetumm`)의 SQL Editor에서 스키마와 초기 데이터를 적용했습니다. 프론트엔드는 계속 정적 데이터를 사용합니다. DB 생성과 프론트엔드 연결은 별개입니다.
+2026-10-25에 Supabase `QR-MENU` 프로젝트(`pfjcitkxemojspgetumm`)의 SQL Editor에서 스키마와 초기 데이터를 적용하고, 손님용 프론트엔드의 공개 조회도 연결했습니다. 화면은 Data API에서 현재 카테고리·메뉴를 읽고, 사진은 기존 정적 파일을 사용합니다. 관리자 화면은 포함하지 않습니다.
 
 ## 구조
 
