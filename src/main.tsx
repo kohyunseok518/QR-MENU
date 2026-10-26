@@ -1,9 +1,13 @@
-import { StrictMode } from "react";
+import { StrictMode, Suspense, lazy } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App";
+const MenuApp = lazy(() => import("./App"));
+const AdminApp = lazy(() => import("./admin/AdminApp"));
+const isAdmin = /^\/admin\/?$/.test(location.pathname);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <App />
+    <Suspense fallback={<p role="status">불러오는 중…</p>}>
+      {isAdmin ? <AdminApp /> : <MenuApp />}
+    </Suspense>
   </StrictMode>,
 );
