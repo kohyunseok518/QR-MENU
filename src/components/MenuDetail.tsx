@@ -1,4 +1,5 @@
 import * as Dialog from "@radix-ui/react-dialog";
+import { useRef } from "react";
 import { CircleAlert, MapPin, X } from "lucide-react";
 import type { Locale, MenuItem } from "../domain/menu";
 import { copy, countryLabel, ingredientLabel } from "../i18n/copy";
@@ -22,6 +23,7 @@ export function MenuDetail({
   restoreFocus,
 }: Props) {
   const t = copy[locale];
+  const contentRef = useRef<HTMLDivElement>(null);
   return (
     <Dialog.Root
       open={item !== null}
@@ -33,7 +35,13 @@ export function MenuDetail({
         <Dialog.Portal>
           <Dialog.Overlay className="dialog-overlay" />
           <Dialog.Content
+            ref={contentRef}
             className="dialog-content"
+            tabIndex={-1}
+            onOpenAutoFocus={(event) => {
+              event.preventDefault();
+              contentRef.current?.focus({ preventScroll: true });
+            }}
             onCloseAutoFocus={restoreFocus}
           >
             <div className="dialog-toolbar">
