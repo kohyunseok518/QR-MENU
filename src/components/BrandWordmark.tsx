@@ -15,7 +15,7 @@ export function BrandWordmark() {
   return (
     <svg
       className="brand-wordmark"
-      viewBox="0 -10 3650 1040"
+      viewBox="0 -10 3650 1350"
       aria-hidden="true"
       focusable="false"
     >
@@ -42,6 +42,9 @@ export function BrandWordmark() {
           </g>
         ))}
       </g>
+      <text x="1825" y="1230" textAnchor="middle" fontSize="280" fill="#302b25" style={{ fontFamily: "var(--serif)", fontWeight: 500, letterSpacing: 40 }}>
+        해장국몸국
+      </text>
     </svg>
   );
 }

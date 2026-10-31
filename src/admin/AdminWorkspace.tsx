@@ -154,7 +154,7 @@ export function AdminWorkspace({
     <div className="admin-shell">
       <header className="admin-header">
         <div className="admin-header-inner">
-          <a href="/admin" className="admin-brand" aria-label="바글바글 관리자">
+          <a href="/admin" className="admin-brand" aria-label="바글바글해장국몸국 관리자">
             <BrandWordmark />
             <span>관리자</span>
           </a>

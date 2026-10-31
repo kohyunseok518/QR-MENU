@@ -44,7 +44,7 @@ function Login({ client }: { client: SupabaseClient }) {
   return (
     <main className="admin-login">
       <section className="admin-login-intro">
-        <a href="/menu?lang=ko" aria-label="바글바글 메뉴판">
+        <a href="/menu?lang=ko" aria-label="바글바글해장국몸국 메뉴판">
           <BrandWordmark />
         </a>
         <p className="admin-kicker">메뉴판 관리</p>
@@ -63,7 +63,7 @@ function Login({ client }: { client: SupabaseClient }) {
         </a>
       </section>
       <section className="admin-login-card" aria-labelledby="login-heading">
-        <p className="admin-kicker">바글바글</p>
+        <p className="admin-kicker">바글바글해장국몸국</p>
         <h2 id="login-heading">관리자 로그인</h2>
         <p className="admin-help">등록된 관리자 계정으로 로그인해 주세요.</p>
         <form onSubmit={login}>
@@ -191,7 +191,7 @@ export default function AdminApp() {
   });
   useEffect(() => {
     document.documentElement.lang = "ko";
-    document.title = "바글바글 · 관리자";
+    document.title = "바글바글해장국몸국 · 관리자";
   }, []);
   if (!client)
     return (
